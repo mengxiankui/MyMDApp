@@ -1,0 +1,9 @@
+include ':MyApp'
+include ':MyMDApp'
+include ':lib_baseframe'
+include ':PickerView'
+
+//project(":MyApp").projectDir = file("MyApp")
+project(":MyMDApp").projectDir = file("MyMDApp")
+project(":lib_baseframe").projectDir = file("lib_baseframe")
+project(":PickerView").projectDir = file("PickerView")

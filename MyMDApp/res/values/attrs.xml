@@ -1,0 +1,46 @@
+<resources>
+
+    <string-array name="menu_name">
+        <item>RecyclerView</item>
+        <item>ToolBar</item>
+        <item>Location</item>
+        <item>语音识别</item>
+        <item>日记本</item>
+        <item>聊天机器人</item>
+        <item>画板</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="menu_activity">
+        <item>RecyclerViewActivity</item>
+        <item>ToolBarActivity</item>
+        <item>LocationActivity</item>
+        <item>SpeechRecognitionActivity</item>
+        <item>DiaryListActivity</item>
+        <item>TuLingLauncherActivity</item>
+        <item>DrawerActivity</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>10</item>
+    </string-array>
+
+    <declare-styleable name="ScrimInsetsView">
+        <attr name="appInsetForeground" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="BounceBackViewPager">
+
+        <!--
+    determines the maximum amount of translation along the z-axis during the overscroll.    
+    Default is 150.   
+        -->
+        <attr name="overscroll_translation" format="dimension" />
+
+        <!-- Duration of animation when user releases the over scroll. Default is 400 ms. -->
+        <attr name="overscroll_animation_duration" format="integer" />
+    </declare-styleable>
+
+</resources>

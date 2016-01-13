@@ -1,0 +1,8 @@
+<resources>
+    <color name="navdrawer_header_background">#00e5ff</color>
+    <color name="navdrawer_menu_background">#ffffff</color>
+    <color name="divider">#1f000000</color>
+    
+    <color name="black">#000000</color>
+    <color name="grey">#888888</color>
+</resources>

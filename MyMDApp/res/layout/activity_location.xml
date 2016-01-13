@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mymdapp.LocationActivity" >
+
+    <include layout="@layout/toolbar" />
+
+    <TextView 
+        android:id="@+id/txt_location1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <Button 
+        android:id="@+id/btn_gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gps获取位置"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    
+    <TextView 
+        android:id="@+id/txt_location2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <Button 
+        android:id="@+id/btn_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络获取位置"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    
+    <TextView 
+        android:id="@+id/txt_location3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <TextView 
+        android:id="@+id/txt_address3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <Button 
+        android:id="@+id/btn_tencent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="腾讯定位获取位置"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    
+    <TextView 
+        android:id="@+id/txt_address4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="未自动定位"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <Button 
+        android:id="@+id/btn_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自动定位位置不对？点击设置"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:visibility="gone"/>
+    
+    <TextView 
+        android:id="@+id/txt_address5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="未选择位置"
+        style="@style/TextAppearance.Body1.Inverse"/>
+    
+    <Button 
+        android:id="@+id/btn_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击设置您的位置"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    
+
+</LinearLayout>

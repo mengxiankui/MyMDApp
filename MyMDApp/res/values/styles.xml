@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="TextAppearance.Body1.Inverse" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item> <!-- bug in AppCompat, can remove this when it's fixed -->
+        <item name="android:textColor">?android:textColorSecondaryInverse</item>
+    </style>
+    
+    <style name="TextAppearance.Body2.Inverse" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">14sp</item> <!-- bug in AppCompat, can remove this when it's fixed -->
+        <item name="android:textColor">?android:textColorTertiaryInverse</item>
+    </style>
+    
+    <style name="Widget.EditText.Inverse" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14sp</item> <!-- bug in AppCompat, can remove this when it's fixed -->
+        <item name="android:textColor">?android:textColorSecondaryInverse</item>
+    </style>
+    
+    <declare-styleable name="ColorPickerView">  
+         <attr name="border_width" format="dimension" /> 
+         <attr name="border_color" format="color" /> 
+         <attr name="inner_border_width" format="dimension" />  
+         <attr name="inner_border_color" format="color" /> 
+         <attr name="rectHeight" format="dimension" />  
+     </declare-styleable>
+    
+</resources>

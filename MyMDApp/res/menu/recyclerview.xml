@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mymdapp.RecyclerViewActivity" >
+
+    <item
+        android:id="@+id/plus"
+        app:showAsAction="ifRoom"
+        android:title="plus"/>
+    
+    <item
+        android:id="@+id/minus"
+        app:showAsAction="ifRoom"
+        android:title="minus"/>
+    <item
+        android:id="@+id/horizontal"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="水平"/>
+    
+    <item
+        android:id="@+id/vertical"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="垂直"/>
+    <item
+        android:id="@+id/grid"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="网格"/>
+    
+    <item
+        android:id="@+id/staggeredgrid_h"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:title="水平滑动网格"/>
+    
+    <item
+        android:id="@+id/staggeredgrid_v"
+        android:orderInCategory="5"
+        app:showAsAction="never"
+        android:title="垂直瀑布流"/>
+    
+
+</menu>

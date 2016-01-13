@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyMDApp</string>
+    <string name="my_email">mengxiankui@yeah.net</string>
+    <string name="my_name">孟显奎</string>
+    
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="str_btn_speak">Speak</string>
+    
+    <string name="alert_cancel">真的要取消么？日记内容将不会被以保存！</string>
+    <string name="alert_ok">标题或内容未填写，确定保存么？</string>
+    <string name="alert_exit">确定退出么？</string>
+    <string name="alert_wrong_birthday">生日记错了，你到底是谁？！！！</string>
+    <string name="alert_delete">真的要删除这条日记么？</string>
+    
+    <string name="robot_welcome_hanzi">我是您的小子淇，有什么能为您服务的，我的主人~</string>
+    <string name="robot_welcome_meizi">兔子淇大人，请尽情的调教我吧~</string>
+    
+
+</resources>
