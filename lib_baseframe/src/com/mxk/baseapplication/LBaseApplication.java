@@ -91,7 +91,7 @@ public class LBaseApplication extends Application
     {
         // TODO Auto-generated method stub
     	//设置日志类型
-    	Logger.setLogType(LogType.BOTH);
+    	Logger.setLogType(LogType.LOGCAT);
     	//设置日志级别
     	Logger.setLogLevel(LoggerConfig.DEBUG);
         //初始化配置信息
