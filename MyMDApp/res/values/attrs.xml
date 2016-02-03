@@ -35,7 +35,8 @@
 
         <!--
     determines the maximum amount of translation along the z-axis during the overscroll.    
-    Default is 150.   
+    Default is 150.   
+
         -->
         <attr name="overscroll_translation" format="dimension" />
 
