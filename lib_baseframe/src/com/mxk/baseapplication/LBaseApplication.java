@@ -113,7 +113,7 @@ public class LBaseApplication extends Application
             {
                 // TODO Auto-generated method stub
                 super.onConnect(type);
-                onConnect(type);
+                LBaseApplication.this.onConnect(type);
             }
 
             @Override
@@ -121,7 +121,7 @@ public class LBaseApplication extends Application
             {
                 // TODO Auto-generated method stub
                 super.onDisConnect();
-                onDisConnect();
+                LBaseApplication.this.onDisConnect();
 
             }
         };
