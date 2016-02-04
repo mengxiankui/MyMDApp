@@ -15,7 +15,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import com.example.mymdapp.R;
-import com.example.util.Consts;
+import com.example.util.Consts.DiaryConst;
 import com.mxk.baseapplication.LBaseActivity;
 
 public class DiaryActivity extends LBaseActivity {
@@ -41,11 +41,11 @@ public class DiaryActivity extends LBaseActivity {
 	public void setToolBar(Toolbar mToolbar) {
 		// TODO Auto-generated method stub
 		Bundle bundle = getIntent().getExtras();
-		strDiaryType = bundle.getString(Consts.DIARY_TYPE);
-		if (strDiaryType.equals(Consts.TYPE_NEW)) {
+		strDiaryType = bundle.getString(DiaryConst.DIARY_TYPE);
+		if (strDiaryType.equals(DiaryConst.TYPE_NEW)) {
 			getToolBar().setTitle("新建日记");
 		} else {
-			getToolBar().setTitle(bundle.getString(Consts.TITLE, ""));
+			getToolBar().setTitle(bundle.getString(DiaryConst.TITLE, ""));
 		}
 	}
 
@@ -130,24 +130,24 @@ public class DiaryActivity extends LBaseActivity {
 	private void init() {
 		// TODO Auto-generated method stub
 		Bundle bundle = getIntent().getExtras();
-		etxtTitle.setText(bundle.getString(Consts.TITLE, ""));
-		etxtContent.setText(bundle.getString(Consts.CONTENT, ""));
+		etxtTitle.setText(bundle.getString(DiaryConst.TITLE, ""));
+		etxtContent.setText(bundle.getString(DiaryConst.CONTENT, ""));
 	}
 
 	protected void saveDiary() {
 		// TODO Auto-generated method stub
 		ContentValues values = new ContentValues();
-		values.put(Consts.TITLE, etxtTitle.getText().toString());
-		values.put(Consts.CONTENT, etxtContent.getText().toString());
-		values.put(Consts.DATE, System.currentTimeMillis());
-		if (strDiaryType.equals(Consts.TYPE_NEW)) {
-			getContentResolver().insert(Consts.CONTENT_URI, values);
+		values.put(DiaryConst.TITLE, etxtTitle.getText().toString());
+		values.put(DiaryConst.CONTENT, etxtContent.getText().toString());
+		values.put(DiaryConst.DATE, System.currentTimeMillis());
+		if (strDiaryType.equals(DiaryConst.TYPE_NEW)) {
+			getContentResolver().insert(DiaryConst.CONTENT_URI, values);
 		} else {
 			getContentResolver().delete(
-					ContentUris.withAppendedId(Consts.CONTENT_URI, Long
-							.parseLong(getIntent().getExtras().getString(Consts.TID))),
+					ContentUris.withAppendedId(DiaryConst.CONTENT_URI, Long
+							.parseLong(getIntent().getExtras().getString(DiaryConst.TID))),
 					null, null);
-			getContentResolver().insert(Consts.CONTENT_URI,
+			getContentResolver().insert(DiaryConst.CONTENT_URI,
 					values);
 		}
 		finish();

@@ -9,8 +9,8 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 import com.mxk.baseframe.util.log.Logger;
+import com.qianghongbao.helper.JobHelper;
 import com.qianghongbao.job.IAccessibilityJob;
-import com.qianghongbao.job.QHBAccessibilityJob;
 
 import java.util.Iterator;
 import java.util.List;
@@ -24,7 +24,7 @@ public class QHBAccessibilityService extends AccessibilityService {
     @Override
     public void onCreate() {
         super.onCreate();
-        accessibilityJob = new QHBAccessibilityJob();
+        accessibilityJob = JobHelper.getQHBJob();
     }
 
     @Override
@@ -84,6 +84,11 @@ public class QHBAccessibilityService extends AccessibilityService {
             service.startActivity(intent);
         }
 
+    }
+
+    public static QHBAccessibilityService getService()
+    {
+        return service;
     }
 
 }

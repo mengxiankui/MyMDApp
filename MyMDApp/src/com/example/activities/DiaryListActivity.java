@@ -27,7 +27,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import com.example.mymdapp.R;
-import com.example.util.Consts;
+import com.example.util.Consts.DiaryConst;
 import com.example.util.TimeUtil;
 import com.mxk.baseapplication.LBaseActivity;
 
@@ -74,13 +74,13 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
             	Intent intent = new Intent(DiaryListActivity.this, DiaryActivity.class);
             	Bundle bundle = new Bundle();
                 Cursor cursor = (Cursor) parent.getAdapter().getItem(position);
-                bundle.putString(Consts.TID,
-                    cursor.getString(cursor.getColumnIndex(Consts.TID)));
-                bundle.putString(Consts.TITLE,
-                    cursor.getString(cursor.getColumnIndex(Consts.TITLE)));
-                bundle.putString(Consts.CONTENT,
-                    cursor.getString(cursor.getColumnIndex(Consts.CONTENT)));
-                bundle.putString(Consts.DIARY_TYPE, Consts.TYPE_EDIT);
+                bundle.putString(DiaryConst.TID,
+                    cursor.getString(cursor.getColumnIndex(DiaryConst.TID)));
+                bundle.putString(DiaryConst.TITLE,
+                    cursor.getString(cursor.getColumnIndex(DiaryConst.TITLE)));
+                bundle.putString(DiaryConst.CONTENT,
+                    cursor.getString(cursor.getColumnIndex(DiaryConst.CONTENT)));
+                bundle.putString(DiaryConst.DIARY_TYPE, DiaryConst.TYPE_EDIT);
             	intent.putExtras(bundle);
                 startActivity(intent);
                 return true;
@@ -95,7 +95,7 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
                 // TODO Auto-generated method stub
             	Intent intent = new Intent(DiaryListActivity.this, DiaryActivity.class);
             	Bundle bundle = new Bundle();
-            	bundle.putString(Consts.DIARY_TYPE, Consts.TYPE_NEW);
+            	bundle.putString(DiaryConst.DIARY_TYPE, DiaryConst.TYPE_NEW);
             	intent.putExtras(bundle);
                 startActivity(intent);
 
@@ -164,7 +164,7 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
         {
             // TODO Auto-generated method stub
             ViewHolder holder = (ViewHolder) view.getTag();
-            String strTitle = cursor.getString(cursor.getColumnIndex(Consts.TITLE));
+            String strTitle = cursor.getString(cursor.getColumnIndex(DiaryConst.TITLE));
             if (TextUtils.isEmpty(strTitle))
             {
                 holder.txtTitle.setText("未命名");
@@ -173,9 +173,9 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
             {
                 holder.txtTitle.setText(strTitle);
             }
-            Long lmilliseconds = cursor.getLong(cursor.getColumnIndex(Consts.DATE));
+            Long lmilliseconds = cursor.getLong(cursor.getColumnIndex(DiaryConst.DATE));
             holder.txtDate.setText(TimeUtil.getDateFormat(lmilliseconds));
-            final long lId = cursor.getLong(cursor.getColumnIndex(Consts.TID));
+            final long lId = cursor.getLong(cursor.getColumnIndex(DiaryConst.TID));
             holder.btnDelete.setOnClickListener(new OnClickListener()
             {
 
@@ -195,7 +195,7 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
                                         // TODO Auto-generated method stub
                                     	DiaryListActivity.this.getContentResolver().delete(
                                             ContentUris.withAppendedId(
-                                                Consts.CONTENT_URI, lId),
+                                                DiaryConst.CONTENT_URI, lId),
                                             null, null);
                                     }
                                 })
@@ -227,8 +227,8 @@ public class DiaryListActivity extends LBaseActivity implements LoaderCallbacks<
     public Loader<Cursor> onCreateLoader(int id, Bundle args)
     {
         // TODO Auto-generated method stub
-        return new CursorLoader(this, Consts.CONTENT_URI, null, null, null,
-            Consts.ORDER_DATE_DESC);
+        return new CursorLoader(this, DiaryConst.CONTENT_URI, null, null, null,
+            DiaryConst.ORDER_DATE_DESC);
     }
 
     @Override

@@ -105,7 +105,7 @@ public class DrawerActivity extends LBaseActivity {
 	private void savePaint()
     {
         File file = new File(Environment.getExternalStorageDirectory(),
-            TimeUtil.getDrawerPaintFormat() + ".png");
+            TimeUtil.getStringDateFormat() + ".png");
         if (file.exists())
         {
             file.delete();

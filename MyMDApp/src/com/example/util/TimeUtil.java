@@ -13,6 +13,7 @@ public class TimeUtil
     public static final String STR_FORMAT_MMM_D = "MMM d";
     public static final String STR_FORMAT_HH_MM = "HH:mm";
     public static final String STR_FORMAT_YYYYMMDDHHMM = "yyyyMMDDHHmm";
+    public static final String STR_FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-DD HH:mm:ss";
 
     public static String getDateFormat(long milliseconds)
     {
@@ -39,7 +40,7 @@ public class TimeUtil
 
     }
 
-    public static String getDrawerPaintFormat()
+    public static String getStringDateFormat()
     {
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat sdf;
@@ -50,4 +51,16 @@ public class TimeUtil
         return sdf.format(date);
 
     }
+
+    public static String getDBDateFormat()
+    {
+        Date date = new Date(System.currentTimeMillis());
+        SimpleDateFormat sdf;
+
+        sdf = new SimpleDateFormat(STR_FORMAT_YYYY_MM_DD_HH_MM_SS, Locale.CHINA);
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+
+        return sdf.format(date);
+    }
+
 }

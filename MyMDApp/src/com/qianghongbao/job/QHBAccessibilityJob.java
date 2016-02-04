@@ -6,6 +6,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
 import com.mxk.baseframe.util.log.Logger;
+import com.qianghongbao.helper.HongBaoDBHelper;
 import com.qianghongbao.services.QHBAccessibilityService;
 
 import java.util.List;
@@ -15,8 +16,6 @@ import java.util.List;
  */
 public class QHBAccessibilityJob extends IAccessibilityJob {
     private static final String LOG_TAG = QHBAccessibilityJob.class.getSimpleName();
-    //钱数
-//    com.tencent.mm:id/b4e
 
     public static boolean isSuperMode() {
         return isSuperMode;
@@ -45,6 +44,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob {
     @Override
     public void onReceiveJob(AccessibilityEvent event) {
         Logger.d(LOG_TAG, "onReceiveJob !" + event.getClassName());
+//        initFirstChecked();
         int type = event.getEventType();
         if (type == AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED) {
             List<CharSequence> texts = event.getText();
@@ -102,6 +102,41 @@ public class QHBAccessibilityJob extends IAccessibilityJob {
     }
 
     private void handleLuckyMoneyDetail(AccessibilityEvent event) {
+
+        if (isFirstChecked) {
+            if (isCanSucceed) {
+                isSucceed = true;
+                float num = 0;
+                String name = "";
+                AccessibilityNodeInfo mNodeInfo = event.getSource();
+                List<AccessibilityNodeInfo> findNodes = mNodeInfo.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/b4e");
+                Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,findNodes.size() = " +findNodes.size());
+//                for (AccessibilityNodeInfo info : findNodes)
+//                {
+//                    Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,info = " +info.getText().toString());
+//                }
+                if (findNodes.size() > 0)
+                {
+                    num = Float.valueOf(findNodes.get(0).getText().toString());
+                    Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,money = " +num);
+                }
+
+                findNodes = mNodeInfo.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/b4a");
+                Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,findNodes.size() = " +findNodes.size());
+//                for (AccessibilityNodeInfo info : findNodes)
+//                {
+//                    Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,info = " +info.getText().toString());
+//                }
+                if (findNodes.size() > 0)
+                {
+                    name = findNodes.get(0).getText().toString();
+                    Logger.d(LOG_TAG,"handleLuckyMoneyDetail ,name = " +name);
+
+                }
+                HongBaoDBHelper.getInstance().addMoney(num,name);
+
+            }
+        }
         if (isSuperMode || isFirstChecked)
         {
             AccessibilityNodeInfo mNodeInfo = event.getSource();
@@ -111,12 +146,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob {
             }
         }
 
-        if (isFirstChecked) {
-            if (isCanSucceed) {
-                isSucceed = true;
-            }
-            quitPage();
-        }
+        quitPage();
 
     }
 
@@ -157,10 +187,9 @@ public class QHBAccessibilityJob extends IAccessibilityJob {
 
     private void quitPage() {
         if (isFirstChecked) {
-            initFirstChecked();
             QHBAccessibilityService.quitPage();
         }
-
+        isFirstChecked = false;
 
     }
 
