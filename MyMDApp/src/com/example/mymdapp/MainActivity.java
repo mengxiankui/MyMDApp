@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
@@ -71,6 +72,7 @@ public class MainActivity extends LBaseActivity {
     ContentObserver contentObserver = new ContentObserver(null) {
         @Override
         public void onChange(boolean selfChange) {
+            getMoneySum();
             updateQHBData();
         }
     };
@@ -95,11 +97,7 @@ public class MainActivity extends LBaseActivity {
     }
 
     private void init() {
-//        Animation animation = new AlphaAnimation(0.0f, 1.0f);
-//        animation.setDuration(200);
-//        animation.setInterpolator(new DecelerateInterpolator());
-//        LayoutAnimationController layoutAnimationController = new LayoutAnimationController(animation, 100);
-//        scrollLayout.setLayoutAnimation(layoutAnimationController);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getMoneySum();
     }
 
@@ -122,10 +120,6 @@ public class MainActivity extends LBaseActivity {
             boolean needupdate = false;
             Cursor cursor = getContentResolver().query(Consts.WeixinQHBConst.CONTENT_URI, null, Consts.WeixinQHBConst.DATE + " > ? ", new String[]{lLastTime}, Consts.WeixinQHBConst.DATE + " desc");
             Logger.d(LOG_TAG, "cursor.getCount() = " + cursor.getCount());
-            if (cursor.getCount()>0)
-            {
-                needupdate = true;
-            }
             while (cursor.moveToNext()) {
                 TextView textView = new TextView(MainActivity.this);
                 textView.setTextAppearance(MainActivity.this, R.style.TextAppearance_Body1_Inverse);
@@ -142,10 +136,6 @@ public class MainActivity extends LBaseActivity {
             }
             cursor.close();
             lLastTime = TimeUtil.getDBDateFormat();
-            if (needupdate)
-            {
-                getMoneySum();
-            }
         }
 
     }

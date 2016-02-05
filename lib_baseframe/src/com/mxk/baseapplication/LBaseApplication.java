@@ -93,7 +93,7 @@ public class LBaseApplication extends Application
     	//设置日志类型
     	Logger.setLogType(LogType.LOGCAT);
     	//设置日志级别
-    	Logger.setLogLevel(LoggerConfig.DEBUG);
+    	Logger.setLogLevel(LoggerConfig.ERROR);
         //初始化配置信息
     	PropertiesConfigUtil.getPropertiesConfig(this).loadConfig();
     	PreferenceConfigUtil.getPreferenceConfig(this).loadConfig();
