@@ -77,28 +77,28 @@ public class LAppException implements UncaughtExceptionHandler
 			return true;
 		}
 		ex.printStackTrace(System.err);
-		new Thread()
-		{
-			@Override
-			public void run()
-			{
-				Looper.prepare();
-				new AlertDialog.Builder(mContext).setTitle("提示")
-						.setCancelable(false).setMessage("程序崩溃了...")
-						.setNeutralButton("我知道了", new OnClickListener()
-						{
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which)
-							{
-								android.os.Process
-										.killProcess(android.os.Process.myPid());
-								System.exit(10);
-							}
-						}).create().show();
-				Looper.loop();
-			}
-		}.start();
+//		new Thread()
+//		{
+//			@Override
+//			public void run()
+//			{
+//				Looper.prepare();
+//				new AlertDialog.Builder(mContext).setTitle("提示")
+//						.setCancelable(false).setMessage("程序崩溃了...")
+//						.setNeutralButton("我知道了", new OnClickListener()
+//						{
+//							@Override
+//							public void onClick(DialogInterface dialog,
+//									int which)
+//							{
+//								android.os.Process
+//										.killProcess(android.os.Process.myPid());
+//								System.exit(10);
+//							}
+//						}).create().show();
+//				Looper.loop();
+//			}
+//		}.start();
 		return true;
 	}
 }
