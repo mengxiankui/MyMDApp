@@ -9,6 +9,6 @@ public class MyApplication extends LBaseApplication
     @Override
     public void onCreate() {
         super.onCreate();
-        CrashReport.initCrashReport(getApplicationContext(), "注册时申请的APPID", false);
+        CrashReport.initCrashReport(getApplicationContext(), "900020244", false);
     }
 }
