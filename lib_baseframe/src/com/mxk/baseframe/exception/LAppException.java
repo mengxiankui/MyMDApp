@@ -54,14 +54,16 @@ public class LAppException implements UncaughtExceptionHandler
 	@Override
 	public void uncaughtException(Thread thread, Throwable ex)
 	{
-		if (!handleException(ex) && mDefaultHandler != null)
-		{
-			mDefaultHandler.uncaughtException(thread, ex);
-		} else
-		{
-//			android.os.Process.killProcess(android.os.Process.myPid());
-//			System.exit(10);
-		}
+//		if (!handleException(ex) && mDefaultHandler != null)
+//		{
+//			mDefaultHandler.uncaughtException(thread, ex);
+//		} else
+//		{
+////			android.os.Process.killProcess(android.os.Process.myPid());
+////			System.exit(10);
+//		}
+		handleException(ex);
+		mDefaultHandler.uncaughtException(thread, ex);
 	}
 
 	/**
