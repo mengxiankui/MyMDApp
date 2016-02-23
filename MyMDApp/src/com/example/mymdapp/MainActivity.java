@@ -34,6 +34,7 @@ import com.mxk.baseapplication.LBaseActivity;
 import com.mxk.baseframe.util.log.Logger;
 import com.mxk.baseframe.util.toast.frenchtoast.FrenchToast;
 import com.qianghongbao.helper.QHBHelper;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -52,6 +53,9 @@ public class MainActivity extends LBaseActivity {
     Button btnOpenService;
     @Bind(R.id.detail)
     Button btnShowDetail;
+    @Bind(R.id.testCrash)
+    Button btnTestCrash;
+
     @Bind(R.id.hongbaonum)
     TextView txtHongBaoNum;
     @Bind(R.id.moneysum)
@@ -172,6 +176,12 @@ public class MainActivity extends LBaseActivity {
                     scrollView.setVisibility(View.GONE);
                 }
 
+            }
+        });
+        btnTestCrash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CrashReport.testJavaCrash();
             }
         });
     }
