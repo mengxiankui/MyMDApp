@@ -37,6 +37,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class TuLingChatFragment extends Fragment implements ITuLing
 {
@@ -44,7 +47,9 @@ public class TuLingChatFragment extends Fragment implements ITuLing
     private ScrollView scrollView;
     private LinearLayout layout;
     private EditText editText;
-    private Button button;
+
+    @Bind(R.id.send)
+    Button button;
 
     private boolean bIsHanZi;
 
@@ -74,7 +79,7 @@ public class TuLingChatFragment extends Fragment implements ITuLing
         scrollView = (ScrollView) rootView.findViewById(R.id.chat_scroll);
         layout = (LinearLayout) rootView.findViewById(R.id.chat_llayout);
         editText = (EditText) rootView.findViewById(R.id.input_edit);
-        button = (Button) rootView.findViewById(R.id.send);
+        ButterKnife.bind(rootView);
         return rootView;
     }
 

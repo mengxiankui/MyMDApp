@@ -114,10 +114,89 @@
             android:gravity="center"
             android:text="Welcome!"
             android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDrawer2"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="打开抽屉2" />
+            <Button
+                android:id="@+id/btnDrawer3"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="打开抽屉3" />
+            <Button
+                android:id="@+id/btnDrawer4"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="打开抽屉4" />
+            <Button
+                android:id="@+id/btnDrawer5"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="打开抽屉5" />
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
     <!-- 侧滑菜单内容 -->
 
     <include layout="@layout/navdrawer" />
+
+    <TextView
+        android:id="@+id/drawer2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="center"
+        style="@style/TextAppearance.Body1.Inverse"
+        android:background="@android:color/white"
+        android:text="第二个抽屉"/>
+    <TextView
+        android:id="@+id/drawer3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:gravity="center"
+        style="@style/TextAppearance.Body1.Inverse"
+        android:text="第三个抽屉"/>
+    <TextView
+        android:id="@+id/drawer4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:gravity="center"
+        style="@style/TextAppearance.Body1.Inverse"
+        android:text="第四个抽屉"/>
+    <TextView
+        android:id="@+id/drawer5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:gravity="center"
+        style="@style/TextAppearance.Body1.Inverse"
+        android:text="第五个抽屉"/>
+
+
 
 </android.support.v4.widget.DrawerLayout>

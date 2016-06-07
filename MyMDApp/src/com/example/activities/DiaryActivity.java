@@ -17,6 +17,9 @@ import butterknife.ButterKnife;
 import com.example.mymdapp.R;
 import com.example.util.Consts.DiaryConst;
 import com.mxk.baseapplication.LBaseActivity;
+import com.qinggan.netmusic.other.MusicReq;
+import com.qinggan.netmusic.other.NetMusicCallback;
+import com.qinggan.netmusic.other.NetMusicManager;
 
 public class DiaryActivity extends LBaseActivity {
 
@@ -26,7 +29,7 @@ public class DiaryActivity extends LBaseActivity {
 	EditText etxtContent;
 	@Bind(R.id.btn_ok)
 	Button btnOk;
-	@Bind(R.id.btn_cancel)
+//	@Bind(R.id.btn_cancel)
 	Button btnCancel;
 
 	private String strDiaryType;
@@ -47,11 +50,24 @@ public class DiaryActivity extends LBaseActivity {
 		} else {
 			getToolBar().setTitle(bundle.getString(DiaryConst.TITLE, ""));
 		}
+
+		NetMusicManager.getInstance(this).getMusicAlbumUrl(new MusicReq(213141L), new NetMusicCallback.MusicAlbumUrlResultCallback() {
+			@Override
+			public void onMusicAlbumUrlSucceed(MusicReq musicReq, String s) {
+
+			}
+
+			@Override
+			public void onMusicAlbumUrlFailed(MusicReq musicReq, int i) {
+
+			}
+		});
 	}
 
 	@Override
 	public void onAfterOnCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		btnCancel = (Button)findViewById(R.id.btn_cancel);
 		ButterKnife.bind(this);
 		setupToolBar();
 		init();

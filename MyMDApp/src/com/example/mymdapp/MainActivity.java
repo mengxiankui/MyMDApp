@@ -65,6 +65,28 @@ public class MainActivity extends LBaseActivity {
     @Bind(R.id.detailScrollLayout)
     LinearLayout scrollLayout;
 
+    @Bind(R.id.btnDrawer2)
+    Button btnDrawer2;
+    @Bind(R.id.btnDrawer3)
+    Button btnDrawer3;
+    @Bind(R.id.btnDrawer4)
+    Button btnDrawer4;
+    @Bind(R.id.btnDrawer5)
+    Button btnDrawer5;
+
+    @Bind(R.id.drawer2)
+    TextView drawer2;
+    @Bind(R.id.drawer3)
+    TextView drawer3;
+    @Bind(R.id.drawer4)
+    TextView drawer4;
+    @Bind(R.id.drawer5)
+    TextView drawer5;
+
+
+
+
+
 
     private ActionBarDrawerToggle mDrawerToggle;
     private SlideMenuAdapter adapter;
@@ -184,6 +206,33 @@ public class MainActivity extends LBaseActivity {
                 CrashReport.testJavaCrash();
             }
         });
+
+        btnDrawer2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(drawer2);
+            }
+        });
+        btnDrawer3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(drawer3);
+            }
+        });
+        btnDrawer4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(drawer4);
+            }
+        });
+        btnDrawer5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(drawer5);
+            }
+        });
+
+
     }
 
     /**
