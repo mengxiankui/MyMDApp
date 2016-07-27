@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <com.example.ui.widget.DotLoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff6688"
+        app:acceleration="1.0"
+        app:circle_duration="1500"
+        app:dot_color="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextAppearance.Body2.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加速度设置：" />
+
+        <TextView
+            android:id="@+id/accelerate_txt"
+            style="@style/TextAppearance.Body2.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/accelerate_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextAppearance.Body2.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一圈时间（ms）：" />
+
+        <TextView
+            android:id="@+id/duration_txt"
+            style="@style/TextAppearance.Body2.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/duration_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="3000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/color_edit"
+            style="@style/Widget.EditText.Inverse"
+            android:layout_width="50dp"
+            android:singleLine="true"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/color_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/color_edit"
+            android:text="Confirm"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

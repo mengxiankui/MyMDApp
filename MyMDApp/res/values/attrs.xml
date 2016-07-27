@@ -8,10 +8,10 @@
         <item>日记本</item>
         <item>聊天机器人</item>
         <item>画板</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
+        <item>音乐频谱</item>
+        <item>Visualizer</item>
+        <item>腾讯vod</item>
+        <item>自定义圆形加载进度</item>
     </string-array>
     <string-array name="menu_activity">
         <item>RecyclerViewActivity</item>
@@ -21,15 +21,24 @@
         <item>DiaryListActivity</item>
         <item>TuLingLauncherActivity</item>
         <item>DrawerActivity</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>10</item>
+        <item>MediaPlayerTest</item>
+        <item>VisualizerTest</item>
+        <item>TencentVodActivity</item>
+        <item>ProgressActivity</item>
     </string-array>
 
     <declare-styleable name="ScrimInsetsView">
         <attr name="appInsetForeground" format="reference|color" />
     </declare-styleable>
+
+    <declare-styleable name="DotLoadingView">
+        <attr name="circle_duration" format="integer" />
+        <attr name="dot_color" format="color" />
+        <attr name="acceleration" format="float" />
+
+    </declare-styleable>
+
+
     
     <declare-styleable name="BounceBackViewPager">
 

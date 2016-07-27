@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adapter.SlideMenuAdapter;
+import com.example.ui.widget.LoadingView;
 import com.example.util.Consts;
 import com.example.util.MemuActivityManager;
 import com.example.util.TimeUtil;
@@ -82,6 +83,9 @@ public class MainActivity extends LBaseActivity {
     TextView drawer4;
     @Bind(R.id.drawer5)
     TextView drawer5;
+
+    @Bind(R.id.loading_view)
+    LoadingView loadingView;
 
 
 
@@ -228,7 +232,14 @@ public class MainActivity extends LBaseActivity {
         btnDrawer5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDrawerLayout.openDrawer(drawer5);
+                if (loadingView.getVisibility() == View.VISIBLE)
+                {
+                    loadingView.setVisibility(View.GONE);
+                }
+                else
+                {
+                    loadingView.setVisibility(View.VISIBLE);
+                }
             }
         });
 

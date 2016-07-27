@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:sat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.mxk.ui.floatbutton.SatelliteMenu
+            android:id="@+id/suspend_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52dp"
+            sat:buttonOffset="16"
+            sat:closeOnClick="true"
+            sat:expandButtonOffset="4"
+            sat:expandDuration="500"
+            sat:satelliteDistance="400"
+            sat:totalSpacingDegree="90" />
+
+</FrameLayout>

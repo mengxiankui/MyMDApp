@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- menu -->
+    <string-array name="menu_name">
+        <item>语音识别</item>
+        <item>可拖拽列表</item>
+        <item>日记本</item>
+        <item>聊天机器人</item>
+        <item>画板</item>
+        <item>悬浮按钮</item>
+        <item>悬浮展开控件</item>
+        <item>弹出框测试</item>
+        <item>分享</item>
+        <item>关键字列表</item>
+        <item>图文混排</item>
+        <item>OpenGL测试</item>
+        <item>13</item>
+        <item>About</item>
+    </string-array>
+    
+    <declare-styleable name="ColorPickerView">  
+         <attr name="border_width" format="dimension" /> 
+         <attr name="border_color" format="color" /> 
+         <attr name="inner_border_width" format="dimension" />  
+         <attr name="inner_border_color" format="color" /> 
+         <attr name="rectHeight" format="dimension" />  
+     </declare-styleable>
+     <declare-styleable name="MyScrollViewBase"> 
+         <attr name="scrollmode">
+            <enum name="pull_from_start" value="0"/>
+            <enum name="pull_from_end" value="1"/>
+            <enum name="both" value="2"/>
+            <enum name="none" value="3"/>
+            <enum name="noscroll" value="4" />
+        </attr>
+        <attr name="scrolldirection">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>  
+     </declare-styleable>
+
+</resources>

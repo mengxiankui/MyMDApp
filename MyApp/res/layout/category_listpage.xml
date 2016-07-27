@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.zte.iptvclient.android.baseclient.ui.pulltorefreshview.PullToRefreshListView
+        android:id="@+id/applist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        test:scrolldirection="vertical"
+        test:scrollmode="pull_from_start" />
+
+</merge>

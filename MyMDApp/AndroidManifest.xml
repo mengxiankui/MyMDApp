@@ -36,6 +36,10 @@
 
     <uses-permission android:name="android.permission.READ_LOGS" />
 
+    <!-- 使用音场效果必要的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
     <application
         android:name="com.example.application.MyApplication"
         android:allowBackup="true"
@@ -67,6 +71,9 @@
         <activity android:name="com.example.activities.DiaryActivity" />
         <activity android:name="com.example.activities.TuLingLauncherActivity" />
         <activity android:name="com.example.activities.DrawerActivity" />
+        <activity android:name="com.example.activities.MediaPlayerTest" />
+        <activity android:name="com.example.activities.TencentVodActivity" />
+        <activity android:name="com.example.activities.ProgressActivity" />
 
         <provider
             android:name="com.example.util.DiaryProvider"

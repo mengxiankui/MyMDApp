@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.mxk.ui.floatbutton.SatelliteMenu
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sat:closeOnClick="true"
+        sat:expandDuration="500"
+        sat:mainImage="@drawable/ic_launcher"
+        sat:satelliteDistance="400"
+        sat:totalSpacingDegree="90" />
+
+</FrameLayout>

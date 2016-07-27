@@ -149,7 +149,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="打开抽屉5" />
+                android:text="Loading" />
         </LinearLayout>
 
 
@@ -196,6 +196,13 @@
         android:gravity="center"
         style="@style/TextAppearance.Body1.Inverse"
         android:text="第五个抽屉"/>
+
+    <com.example.ui.widget.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
 
 
 

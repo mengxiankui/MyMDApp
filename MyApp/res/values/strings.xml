@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyApp</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_btn_speak">Speak</string>
+    <string name="robot_welcome_hanzi">我是您的小子淇，有什么能为您服务的，我的主人~</string>
+    <string name="robot_welcome_meizi">兔子淇大人，请尽情的调教我吧~</string>
+    <string name="alert_cancel">真的要取消么？日记内容将不会被以保存！</string>
+    <string name="alert_ok">标题或内容未填写，确定保存么？</string>
+    <string name="alert_exit">确定退出么？</string>
+    <string name="alert_wrong_birthday">生日记错了，你到底是谁？！！！</string>
+    <string name="alert_delete">真的要删除这条日记么？</string>
+    <string name="copy_right">This Demo belongs to Mxk! Nobody else should use!</string>
+    <string name="refresh_list_loading_pullToRefresh">上拉加载</string>
+    <string name="refresh_list_loading_releaseToRefresh">释放更新</string>
+    <string name="refresh_list_loading_refreshing_from_start">刷新中...</string>
+    <string name="refresh_list_loading_refreshing_from_end">正在加载</string>
+    <string name="refresh_list_loading_loadfinish">亲~ 木有更多内容了</string>
+    <string name="refresh_list_loading_loadfinish_format" formatted="false">此次探险结束高度%1$d米，发现应用%2$d个</string>
+    <string name="refresh_list_loading_pull_from_start">下拉刷新</string>
+    <string name="refresh_suc">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="refresh_loading_fail">加载失败，再试一次</string>
+    <string name="refresh_fail_network">网络不给力</string>
+<string-array name="jazz_artist_names">
+      <item>Brad Mehldau</item>
+      <item>Joshua Redman</item>
+      <item>Chick Corea</item>
+      <item>Kurt Rosenwinkel</item>
+      <item>Miles Davis</item>
+      <item>Wayne Shorter</item>
+      <item>Michael Brecker</item>
+      <item>Herbie Hancock</item>
+      <item>Joe Zawinul</item>
+      <item>Brian Blade</item>
+      <item>Jeff Ballard</item>
+      <item>Larry Grenadier</item>
+      <item>Keith Jarrett</item>
+      <item>McCoy Tyner</item>
+      <item>Stephon Harris</item>
+      <item>Mark Turner</item>
+    </string-array>
+</resources>

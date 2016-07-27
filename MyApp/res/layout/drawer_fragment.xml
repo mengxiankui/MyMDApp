@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <com.mxk.drawerview.DrawerView
+        android:id="@+id/img_paint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/current_color"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/current_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llayout_btns" />
+
+    <LinearLayout
+        android:id="@+id/llayout_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_pick_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Pick Color"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etxt_input_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="Input Paint Color"
+            android:maxLength="8"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_setcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+    </LinearLayout>
+
+</RelativeLayout>
