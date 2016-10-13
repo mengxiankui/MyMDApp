@@ -40,3 +40,10 @@ task buildLib(dependsOn:['build'])<< {
 // ./gradlew buildLib
 
 放在对应module的build.gradle里，在根目录执行./gradlew buildLib
+
+可能需要加上
+android {
+    lintOptions {
+     abortOnError false
+      }
+}
