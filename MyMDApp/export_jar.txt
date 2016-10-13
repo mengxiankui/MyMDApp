@@ -1,0 +1,42 @@
+task copyTask(type: Copy) {
+    from 'cn'
+    into 'build/exportjar/cn'
+}
+
+task copyTask1(type: Copy) {
+    from 'build/intermediates/classes/release'
+    into 'build/exportjar'
+}
+
+//定义一个函数，target是生成jar包的文件名，classDir是class文件所在的文件夹
+def unPackJar(String target){
+    exec{
+        executable "jar"   //解压jar
+        args "xvf",target
+    }
+}
+
+
+//定义一个函数，target是生成jar包的文件名，classDir是class文件所在的文件夹
+def makeJar(String target,String classDir){
+    exec{
+        executable "jar"   //调用jar
+        args "cvf",target
+        args "-C", classDir
+        args "", classDir
+
+    }
+}
+
+//新建一个task,名为buildLib,依赖build(build是一个自带的task)
+task buildLib(dependsOn:['build'])<< {
+//    unPackJar("libs/kwmusic-opensdk-v2.0.0.0.jar")
+//    copyTask.execute()
+    copyTask1.execute()
+    makeJar("FileDownloader-1.2.1.jar","build/exportjar")
+
+}
+
+// ./gradlew buildLib
+
+放在对应module的build.gradle里，在根目录执行./gradlew buildLib
