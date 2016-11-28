@@ -1,4 +1,4 @@
-include ':MyApp'
+include ':MyApp', ':QiangHongBao'
 include ':MyMDApp'
 include ':lib_baseframe'
 include ':PickerView'

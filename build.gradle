@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        maven{ url 'http://repo2.maven.org/maven2/'}
 	maven{ url 'http://maven.oschina.net/content/groups/public/'}
         mavenCentral()
         flatDir {
@@ -9,13 +10,15 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.android.tools.build:gradle:2.2.2'
     }
 }
 
 allprojects {
     repositories {
+        maven{ url 'http://repo2.maven.org/maven2/'}
 	maven{ url 'http://maven.oschina.net/content/groups/public/'}
+
         mavenCentral()
     }
 }
