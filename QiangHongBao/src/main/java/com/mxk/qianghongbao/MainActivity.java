@@ -181,7 +181,10 @@ public class MainActivity extends AppCompatActivity {
 
         cursor.close();
         cursor = getContentResolver().query(Consts.WeixinQHBConst.CONTENT_URI, new String[]{"count(*)"}, null, null, null);
-
+        if (null == cursor)
+        {
+            return;
+        }
         if (cursor.moveToNext())
         {
             num =  cursor.getInt(cursor.getColumnIndex("count(*)"));

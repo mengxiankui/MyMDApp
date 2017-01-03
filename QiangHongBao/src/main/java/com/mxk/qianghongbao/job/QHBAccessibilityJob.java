@@ -37,20 +37,26 @@ public class QHBAccessibilityJob extends IAccessibilityJob
     private boolean isSucceed = false;
 
     //发出的红包框，点击进入抢红包页面
-    private static String HONGBAOROOT = "com.tencent.mm:id/a4w";
+//    private static String HONGBAOROOT = "com.tencent.mm:id/a4w";
+    private static String HONGBAOROOT = "com.tencent.mm:id/a48";
     //抢红包按钮“开”
-    private static String HONGBAO_GET = "com.tencent.mm:id/bg7";
+//    private static String HONGBAO_GET = "com.tencent.mm:id/bg7";
+    private static String HONGBAO_GET = "com.tencent.mm:id/be_";
     //抢慢了，退出按钮
-    private static String HONGBAO_GET_SLOW = "com.tencent.mm:id/bga";
+//    private static String HONGBAO_GET_SLOW = "com.tencent.mm:id/bga";
+    private static String HONGBAO_GET_SLOW = "com.tencent.mm:id/bed";
 
     //抢到的钱数
-    private static String HONGBAO_MONEY = "com.tencent.mm:id/bdq";
+//    private static String HONGBAO_MONEY = "com.tencent.mm:id/bdq";
+    private static String HONGBAO_MONEY = "com.tencent.mm:id/bbe";
 
     //发红包的人
-    private static String HONGBAO_PERSON_NAME = "com.tencent.mm:id/bdm";
+//    private static String HONGBAO_PERSON_NAME = "com.tencent.mm:id/bdm";
+    private static String HONGBAO_PERSON_NAME = "com.tencent.mm:id/bba";
 
     //抢红包结果页面，退出按钮
-    private static String HONGBAO_GET_AND_QUIT = "com.tencent.mm:id/gd";
+//    private static String HONGBAO_GET_AND_QUIT = "com.tencent.mm:id/gd";
+    private static String HONGBAO_GET_AND_QUIT = "com.tencent.mm:id/gr";
 
 
 
@@ -244,6 +250,10 @@ public class QHBAccessibilityJob extends IAccessibilityJob
 
             }
         }
+        Log.d(LOG_TAG,
+                "isSuperMode = " + isSuperMode);
+        Log.d(LOG_TAG,
+                "isFirstChecked = " + isFirstChecked);
         if (isSuperMode || isFirstChecked)
         {
             if (null != service)
