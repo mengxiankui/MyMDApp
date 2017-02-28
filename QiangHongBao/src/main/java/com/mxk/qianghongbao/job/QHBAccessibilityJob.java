@@ -198,8 +198,8 @@ public class QHBAccessibilityJob extends IAccessibilityJob
     private void handleLuckyMoneyDetail()
     {
 
-        if (isFirstChecked)
-        {
+//        if (isFirstChecked)
+//        {
             if (isCanSucceed)
             {
                 isSucceed = true;
@@ -249,7 +249,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob
                 }
 
             }
-        }
+//        }
         Log.d(LOG_TAG,
                 "isSuperMode = " + isSuperMode);
         Log.d(LOG_TAG,

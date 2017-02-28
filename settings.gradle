@@ -2,8 +2,10 @@ include ':MyApp', ':QiangHongBao'
 include ':MyMDApp'
 include ':lib_baseframe'
 include ':PickerView'
+include':dimenscalculate'
 
 //project(":MyApp").projectDir = file("MyApp")
 project(":MyMDApp").projectDir = file("MyMDApp")
 project(":lib_baseframe").projectDir = file("lib_baseframe")
 project(":PickerView").projectDir = file("PickerView")
+project(":dimenscalculate").projectDir = file("dimenscalculate")

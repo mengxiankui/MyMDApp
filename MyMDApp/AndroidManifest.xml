@@ -74,6 +74,7 @@
         <activity android:name="com.example.activities.MediaPlayerTest" />
         <activity android:name="com.example.activities.TencentVodActivity" />
         <activity android:name="com.example.activities.ProgressActivity" />
+        <activity android:name="com.example.activities.CircleProgressActivity" />
 
         <provider
             android:name="com.example.util.DiaryProvider"

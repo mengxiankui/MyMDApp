@@ -12,6 +12,7 @@
         <item>Visualizer</item>
         <item>腾讯vod</item>
         <item>自定义圆形加载进度</item>
+        <item>进度特效</item>
     </string-array>
     <string-array name="menu_activity">
         <item>RecyclerViewActivity</item>
@@ -25,6 +26,7 @@
         <item>VisualizerTest</item>
         <item>TencentVodActivity</item>
         <item>ProgressActivity</item>
+        <item>CircleProgressActivity</item>
     </string-array>
 
     <declare-styleable name="ScrimInsetsView">

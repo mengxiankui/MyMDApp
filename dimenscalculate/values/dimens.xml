@@ -1,0 +1,209 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="menu_item_width">264px</dimen>
+    <dimen name="menu_item_height">118px</dimen>
+    <dimen name="menu_item_div_width">2px</dimen>
+    <dimen name="menv_item_pic_margin_left">36px</dimen>
+    <dimen name="menv_item_text_size">30px</dimen>
+    <dimen name="menu_text_margin_left_pic">10px</dimen>
+    <dimen name="menu_content_div_width">1px</dimen>
+    
+    <!-- 右侧item 高度分为普通文本和带开关 -->
+    <dimen name="height_of_text_area">110px</dimen>
+    <dimen name="height_of_switch_area">156px</dimen>
+    <!-- 内容区距离menv 的缩进一级，二级 -->
+    <dimen name="content_margin_left_first">60px</dimen>
+    <dimen name="content_margin_left_second">89px</dimen>
+    
+    <!-- 内容区二级字体与一级字体的左边距 -->
+    <dimen name="text_second_margin_left_first">29px</dimen>
+    
+    <!-- 右边距缩进值 -->
+    <dimen name="margin_horizontal_of_the_whole">36px</dimen>
+    
+    <!-- 内容区，item 中 上下两个TextView 间距 -->
+    <dimen name="content_txt_vertical_div">14px</dimen>
+    
+    <!-- 统一字体大小 -->
+    <dimen name="BigerTextSize">35px</dimen>
+    <dimen name="BigTextSize">28px</dimen>
+    <dimen name="NormalTextSize">24px</dimen>
+    <dimen name="SmallTextSize">20px</dimen>
+    <dimen name="SmallerTextSize">20px</dimen>
+    
+    <!-- 蓝牙名称和箭头间距 -->
+    <dimen name="bluetooth_name_margin_arrow">10px</dimen>
+    <!-- 蓝牙搜索按钮 -->
+     <dimen name="bluetooth_search_btn_margin_bottom">30px</dimen>
+     <dimen name="bluetooth_search_btn_size">30px</dimen>
+     <dimen name="bluetooth_search_btn_left_text">16px</dimen>
+    <!-- 蓝牙已配对和可用设备布局高度 -->
+    <dimen name="bluetooth_paired_title_layout_height">60px</dimen>
+    <!-- 蓝牙可用设备列表高度 -->
+    <dimen name="bluetooth_searched_layout_height">300px</dimen>
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="width_of_the_whole">800px</dimen>
+    <dimen name="margin_vertical_of_the_whole">20px</dimen>
+    
+    <dimen name="margin">30px</dimen>
+    <dimen name="margin_indextest_to_top">34px</dimen>
+    <dimen name="margin_summarytest_to_top">76px</dimen>
+
+    <dimen name="height_of_text_area_safe">250px</dimen>
+
+    <dimen name="margin_40">40px</dimen>
+    <dimen name="margin_top">35px</dimen>
+    <dimen name="height_of_the_whole">554px</dimen>
+    
+    <dimen name="margin_between_layout_bt">244px</dimen>
+
+
+    
+    <!-- 控制内容显示隐藏的CheckBox 大小 -->
+    <dimen name="check_box_size">30px</dimen>
+    
+     <!-- 水平拖动条 -->
+     <dimen name="seek_bar_max_height">2px</dimen>
+     <dimen name="seek_bar_thumb_offset">16px</dimen>
+    
+    <!-- RadioButton 大小（高度） -->
+    <dimen name="radio_button_size">35px</dimen>
+    <!-- RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div">10px</dimen>
+    <!-- 伴我回家RadioButton 宽度 -->
+    <dimen name="radio_button_width_back_home">120px</dimen>
+    <!-- 伴我回家RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_back_home">12px</dimen>
+    <!-- 自动落锁RadioButton 宽度 -->
+    <dimen name="radio_button_width_auto_lock">145px</dimen>
+    <!-- 自动落锁RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_auto_lock">12px</dimen>
+    <!-- 熄火解锁RadioButton 宽度 -->
+    <dimen name="radio_button_width_stalled_unlock">240px</dimen>
+    <!-- 熄火解锁RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_stalled_unlock">12px</dimen>
+    <!-- 提示音RadioButton 宽度 -->
+    <dimen name="radio_button_width_prompt_sound">200px</dimen>
+    <!-- 提示音RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_prompt_sound">24px</dimen>
+    <!-- 语言切换RadioButton 宽度 -->
+    <dimen name="radio_button_width_change_language">240px</dimen>
+    <!-- 语言切换RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_change_language">24px</dimen>
+    <!-- 报警方式RadioButton 宽度 -->
+    <dimen name="radio_button_width_lane_departure_warning">240px</dimen>
+    <!-- 报警方式RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_lane_departure_warning">24px</dimen>
+    <!-- 系统弹窗时间RadioButton 宽度 -->
+    <dimen name="radio_button_width_system_window_time">260px</dimen>
+    <!-- 系统弹窗时间RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_system_window_time">24px</dimen>
+
+     <!-- 声效设置  EQ模式marginTop -->
+    <dimen name="sound_eq_margin_top">60px</dimen>
+    <!-- 声效设置  EQ模式marginLeft -->
+    <dimen name="sound_eq_margin_left">50px</dimen>
+    <!-- 声效设置  左边区域宽度大小 -->
+    <dimen name="sound_left_content_width">330px</dimen>
+    <!-- EQ模式标题栏高度 -->
+    <dimen name="sound_eq_title_height">50px</dimen>
+     <!-- EQ模式  分割线宽度 -->
+    <dimen name="sound_eq_line_width">390px</dimen>
+    <!-- EQ模式  分割线 MarginTop -->
+    <dimen name="sound_eq_line_margin_top">10px</dimen>
+    <dimen name="sound_seekbar_width">245px</dimen>
+    <!-- 也是高音字体的高度为了等高 -->
+    <dimen name="sound_seekbar_height">35px</dimen>
+    <dimen name="sound_seekbar_margin_top">30px</dimen>
+    <dimen name="sound_seekbar_progress_text_margin_top">12px</dimen>
+    <dimen name="sound_seekbar_progress_text_margin_left">15px</dimen>
+    <!-- 声音平衡距离左边EQ距离 -->
+    <dimen name="sound_right_content_margin_left">40px</dimen>
+    <dimen name="sound_right_content_width">330px</dimen>
+    <dimen name="sound_right_content_height">390px</dimen>
+    <dimen name="sound_target_width">318px</dimen>
+    <dimen name="sound_target_height">318px</dimen>
+    <dimen name="sound_default_text_bottom">20px</dimen>
+    <!-- 声音第二页 MarginTop -->
+    <dimen name="sound_next_page_margin_top">50px</dimen>
+    <!-- 声音第二页 高度 -->
+    <dimen name="sound_next_page_height">520px</dimen>
+    
+    <!-- 时间 -->
+    <dimen name="time_arrow_margin_left">14px</dimen>
+    <!-- 时间制式RadioButton 宽度 -->
+    <dimen name="radio_button_width_time_type">260px</dimen>
+    <!-- 时间制式RadioButton 字体距离按钮的间距 -->
+    <dimen name="radio_button_text_div_time_type">24px</dimen>
+    
+    <!-- WIFI -->
+    <dimen name="wifi_open_tips_margin_bottom">258px</dimen>
+    <dimen name="wifi_search_button_height">72px</dimen>
+    <dimen name="wifi_item_image_horizontal_div">22px</dimen>
+	<dimen name="wifi_connect_button_width">142px</dimen>
+    <dimen name="wifi_connect_button_height">40px</dimen>
+    <dimen name="wifi_connect_button_padding">26px</dimen>
+        
+    <!-- 用户手册 -->
+    <dimen name="btn_back_size">46px</dimen>
+    <dimen name="btn_back_margin_left">30px</dimen>
+    <dimen name="btn_back_margin_top">30px</dimen>
+    <dimen name="gallery_user_manuals_height">365px</dimen>
+    
+    <!-- 蓝牙修改名称对话框 -->
+    <dimen  name="bt_dialog_width">470px</dimen>
+    <dimen  name="bt_dialog_height">210px</dimen>
+    <dimen  name="bt_dialog_et_width">430px</dimen>
+    <dimen  name="bt_dialog_et_height">60px</dimen>
+    <dimen  name="bt_dialog_et_margin_top">45px</dimen>
+    <dimen  name="bt_dialog_et_padding">16px</dimen>
+    <dimen  name="bt_dialog_btn_width">140px</dimen>
+    <dimen  name="bt_dialog_btn_height">40px</dimen>
+    <dimen  name="bt_dialog_btn_div_btn">88px</dimen>
+    <dimen  name="bt_dialog_btn_margin_top">30px</dimen>
+    
+    <!-- 恢复默认对话框 -->
+    <dimen  name="restore_dialog_title_margin_top">55px</dimen>
+    <dimen  name="restore_dialog_btn_width">140px</dimen>
+    <dimen  name="restoredialog_btn_height">40px</dimen>
+    <dimen  name="restore_dialog_btn_div_btn">88px</dimen>
+    <dimen  name="restore_dialog_btn_margin_top">40px</dimen>
+    
+    <!-- 重启倒计时对话框 -->
+    <dimen  name="reboot_dialog_width">474px</dimen>
+    <dimen  name="reboot_dialog_height">240px</dimen>
+    <dimen  name="reboot_dialog_title_margin_top">50px</dimen>
+    <dimen  name="reboot_dialog_image_size">40px</dimen>
+    <dimen  name="reboot_dialog_image_margin_top">40px</dimen> 
+     
+    <!-- 版本信息对话框 -->
+    <dimen name="version_dialog_width">460px</dimen>  
+    <dimen name="version_dialog_height">550px</dimen>
+    <dimen name="version_dialog_close_size">30px</dimen>  
+    <dimen name="version_dialog_close_top">15px</dimen>  
+    <dimen name="version_dialog_close_right">10px</dimen>  
+    <dimen name="version_dialog_item_height">60px</dimen>  
+    <dimen name="version_dialog_version_title_width">185px</dimen>  
+    <dimen name="version_dialog_version_title_margin_left">35px</dimen> 
+      
+    <!-- wifi对话框 -->
+    <dimen  name="wifi_dialog_width">446px</dimen>
+    <dimen  name="wifi_dialog_height">250px</dimen>
+    <dimen  name="wifi_dialog_et_width">340px</dimen>
+    <dimen  name="wifi_dialog_et_height">30px</dimen>
+    <dimen name="wifi_connect_dialog_title_margin_top">18px</dimen>
+    <dimen name="wifi_dialog_ps_text_size">15px</dimen>
+    <dimen name="wifi_dialog_show_password_check_box_size">30px</dimen>
+    <dimen name="wifi_dialog_btn_margin_top">20px</dimen>
+
+    <!-- 待删 -->
+    <dimen name="text_size">28px</dimen>
+    <dimen name="text_size2">10px</dimen>
+    <dimen name="text_size_20">20px</dimen>
+    <dimen name="text_size_24">24px</dimen>
+    
+    
+</resources>

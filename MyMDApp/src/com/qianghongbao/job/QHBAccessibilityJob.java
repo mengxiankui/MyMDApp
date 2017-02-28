@@ -37,6 +37,26 @@ public class QHBAccessibilityJob extends IAccessibilityJob
 
     private boolean isSucceed = false;
 
+    //发出的红包框，点击进入抢红包页面
+    private static String HONGBAOROOT = "com.tencent.mm:id/a4w";
+    //抢红包按钮“开”
+    private static String HONGBAO_GET = "com.tencent.mm:id/bg7";
+    //抢慢了，退出按钮
+    private static String HONGBAO_GET_SLOW = "com.tencent.mm:id/bga";
+
+    //抢到的钱数
+    private static String HONGBAO_MONEY = "com.tencent.mm:id/bdq";
+
+    //发红包的人
+    private static String HONGBAO_PERSON_NAME = "com.tencent.mm:id/bdm";
+
+    //抢红包结果页面，退出按钮
+    private static String HONGBAO_GET_AND_QUIT = "com.tencent.mm:id/gd";
+
+
+
+
+
     /**
      * 红包消息的关键字
      */
@@ -186,7 +206,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob
                     AccessibilityNodeInfo mNodeInfo = service.getRoot();
                     List<AccessibilityNodeInfo> findNodes =
                         mNodeInfo.findAccessibilityNodeInfosByViewId(
-                            "com.tencent.mm:id/b4e");
+                                HONGBAO_MONEY);
                     Logger.d(LOG_TAG,
                         "handleLuckyMoneyDetail ,findNodes.size() = "
                             + findNodes.size());
@@ -203,7 +223,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob
                     }
 
                     findNodes = mNodeInfo.findAccessibilityNodeInfosByViewId(
-                        "com.tencent.mm:id/b4a");
+                            HONGBAO_PERSON_NAME);
                     Logger.d(LOG_TAG,
                         "handleLuckyMoneyDetail ,findNodes.size() = "
                             + findNodes.size());
@@ -233,7 +253,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob
                 AccessibilityNodeInfo mNodeInfo = service.getRoot();
                 List<AccessibilityNodeInfo> findNodes =
                     mNodeInfo.findAccessibilityNodeInfosByViewId(
-                        "com.tencent.mm:id/c4u");
+                            HONGBAO_GET_AND_QUIT);
                 for (AccessibilityNodeInfo nodeInfo : findNodes)
                 {
                     nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
@@ -251,12 +271,12 @@ public class QHBAccessibilityJob extends IAccessibilityJob
         {
             AccessibilityNodeInfo mNodeInfo = service.getRoot();
             List<AccessibilityNodeInfo> findNodes = mNodeInfo
-                .findAccessibilityNodeInfosByViewId("com.tencent.mm:id/b43");
+                .findAccessibilityNodeInfosByViewId(HONGBAO_GET);
 
             if (findNodes.size() == 0)
             {
                 findNodes = mNodeInfo.findAccessibilityNodeInfosByViewId(
-                    "com.tencent.mm:id/b47");
+                        HONGBAO_GET_SLOW);
                 for (AccessibilityNodeInfo nodeInfo : findNodes)
                 {
                     nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
@@ -291,7 +311,7 @@ public class QHBAccessibilityJob extends IAccessibilityJob
                         AccessibilityNodeInfo mNodeInfo = service.getRoot();
                         List<AccessibilityNodeInfo> findNodes =
                             mNodeInfo.findAccessibilityNodeInfosByViewId(
-                                "com.tencent.mm:id/b_");
+                                    HONGBAOROOT);
                         Logger.d(LOG_TAG,
                             "handleChatListHongBao !findNodes.size() = "
                                 + findNodes.size());
